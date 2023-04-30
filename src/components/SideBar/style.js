@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 export const SideBarStyles = styled.div`
   width: 19%;
   height: 80%;
+  position: absolute;
   border-radius: 24px;
   background: linear-gradient(
     29deg,
@@ -13,13 +14,11 @@ export const SideBarStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 100%;
-
     width: 100%;
   }
   .navBarsStyle {
-    margin: 0px 40px;
     position: relative;
-    padding: 25px 0;
+    padding: 25px 35px;
     text-align: start;
     font-size: 18px;
     letter-spacing: 0.1rem;
@@ -32,7 +31,7 @@ export const SideBarStyles = styled.div`
     .activeNagigation {
       position: absolute;
       top: 30%;
-      right: -30%;
+      right: 0%;
       border-radius: 45% 0 0 45%;
       height: 35px;
       width: 35px;
@@ -49,8 +48,8 @@ export const SideBarStyles = styled.div`
       height: 15px;
       border-radius: 50%;
       position: absolute;
-      top: 9%;
-      right: -25%;
+      top: 10.2%;
+      right: 0.2%;
       background: none;
       transform: rotate(0deg);
       box-shadow: 5px 5px 0 0 #fff;
@@ -61,8 +60,8 @@ export const SideBarStyles = styled.div`
       height: 15px;
       border-radius: 50%;
       position: absolute;
-      top: 80%;
-      right: -25%;
+      top: 76%;
+      right: 0.2%;
       background: none;
       transform: rotate(270deg);
       box-shadow: 5px 5px 0 0 #fff;

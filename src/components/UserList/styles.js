@@ -7,11 +7,7 @@ export const UserListStyles = styled.div`
     display: flex;
     align-items: center;
   }
-  .profilePicDiv {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-  }
+
   .userName {
     margin-left: 20px;
     color: #565555fa;
