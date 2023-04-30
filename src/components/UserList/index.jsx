@@ -1,12 +1,21 @@
 import { UserListStyles } from './styles';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getCurrentUser } from '../../Store/userSlice';
 const UserList = ({ data }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const setUser = (element) => {
+    dispatch(getCurrentUser({ data: element }));
+    navigate('/user/profile');
+  };
   return (
     <UserListStyles>
       <div
         className='userContainer'
-        onClick={() => navigate('/user/profile', { state: { data } })}
+        onClick={() => {
+          setUser(data);
+        }}
       >
         <img
           className='profilePicDiv'

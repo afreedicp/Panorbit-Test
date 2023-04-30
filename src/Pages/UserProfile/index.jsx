@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+
 import SideBar from '../../components/SideBar';
 import { UserProfileStyles } from './styles';
+import { useSelector } from 'react-redux';
+import { selectAUser } from '../../Store/userSlice';
 
 const UserProfile = () => {
-  const [data, setData] = useState();
-  const location = useLocation();
-  useEffect(() => {
-    if (location?.state) {
-      setData(location.state.data);
-    }
-  }, [location]);
-  console.log(data);
+  const users = useSelector(selectAUser);
+  console.log(users);
   return (
     <UserProfileStyles>
       <div className='prifileConatiner'>
