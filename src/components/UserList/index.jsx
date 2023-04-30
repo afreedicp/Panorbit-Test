@@ -6,7 +6,7 @@ const UserList = ({ data }) => {
     <UserListStyles>
       <div
         className='userContainer'
-        onClick={() => navigate('/profile', { state: { data } })}
+        onClick={() => navigate('/user/profile', { state: { data } })}
       >
         <img
           className='profilePicDiv'
