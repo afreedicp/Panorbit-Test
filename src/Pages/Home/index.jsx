@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import wave from '../../Assets/wave.svg';
 import UserList from '../../components/UserList';
 import { LandingPageStyles } from './styles';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUsersList, selectUsers } from '../../Store/userSlice';
+
 const Home = () => {
-  const [users, setUsers] = useState();
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetch('https://panorbit.in/api/users.json')
-      .then((response) => response.json())
-      .then((data) => setUsers(data))
-      .catch((error) => console.error(error));
+    dispatch(getUsersList());
   }, []);
+  const users = useSelector(selectUsers);
   return (
     <LandingPageStyles>
       <div className='landingPageContainer'>
