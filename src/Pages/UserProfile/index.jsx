@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import SideBar from '../../components/SideBar';
+import { UserProfileStyles } from './styles';
 
 const UserProfile = () => {
   const [data, setData] = useState();
@@ -10,7 +12,14 @@ const UserProfile = () => {
     }
   }, [location]);
   console.log(data);
-  return <div className='prifileConatiner'>UserProfile</div>;
+  return (
+    <UserProfileStyles>
+      <div className='prifileConatiner'>
+        {' '}
+        <SideBar />{' '}
+      </div>
+    </UserProfileStyles>
+  );
 };
 
 export default UserProfile;
