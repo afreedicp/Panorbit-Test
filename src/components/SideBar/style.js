@@ -48,7 +48,7 @@ export const SideBarStyles = styled.div`
       height: 18px;
       border-radius: 50%;
       position: absolute;
-      top: 5.1%;
+      top: 6.5%;
       right: 0.4%;
       background: none;
       transform: rotate(0deg);
