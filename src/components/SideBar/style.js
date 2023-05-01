@@ -49,7 +49,7 @@ export const SideBarStyles = styled.div`
       border-radius: 50%;
       position: absolute;
       top: 6.5%;
-      right: 0.4%;
+      right: 0%;
       background: none;
       transform: rotate(0deg);
       box-shadow: 8px 8px 0 0 #fff;
