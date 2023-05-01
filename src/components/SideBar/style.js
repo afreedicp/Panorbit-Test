@@ -32,9 +32,9 @@ export const SideBarStyles = styled.div`
       position: absolute;
       top: 30%;
       right: 0%;
-      border-radius: 45% 0 0 45%;
+      border-radius: 70% 0 0 70%;
       height: 35px;
-      width: 35px;
+      width: 28px;
       background: #fff;
     }
   }
@@ -44,15 +44,15 @@ export const SideBarStyles = styled.div`
     border-bottom: 1px solid #fff8;
     ::before {
       content: '';
-      width: 15px;
-      height: 15px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       position: absolute;
-      top: 10.2%;
-      right: 0.2%;
+      top: 5.1%;
+      right: 0.4%;
       background: none;
       transform: rotate(0deg);
-      box-shadow: 5px 5px 0 0 #fff;
+      box-shadow: 8px 8px 0 0 #fff;
     }
     ::after {
       content: '';
@@ -60,11 +60,11 @@ export const SideBarStyles = styled.div`
       height: 15px;
       border-radius: 50%;
       position: absolute;
-      top: 76%;
+      top: 77%;
       right: 0.2%;
       background: none;
       transform: rotate(270deg);
-      box-shadow: 5px 5px 0 0 #fff;
+      box-shadow: 8px 8px 0 0 #fff;
     }
   }
   .arrowHead {
