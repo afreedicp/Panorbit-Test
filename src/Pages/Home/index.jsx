@@ -21,7 +21,7 @@ const Home = () => {
           </div>
           <div className='usersListdiv'>
             {users?.users.map((item) => (
-              <UserList data={item} />
+              <UserList data={item} from={'home'} />
             ))}
           </div>
         </div>

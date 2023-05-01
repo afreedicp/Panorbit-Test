@@ -9,15 +9,20 @@ import GoogleMap from '../../components/GoogleMap';
 
 const UserProfile = () => {
   const user = useSelector(selectAUser);
-  console.log(user);
   return (
     <UserProfileStyles>
       <div className='prifileContainer'>
         <SideBar /> <TopBar data={user} />
         <div className='profileContent'>
           <section className='userDetailsDiv'>
-            <img className='profilePicture' src={user?.profilepicture} />
-            <div className='userNameDiv'>{user?.name}</div>
+            <img
+              className='profilePicture'
+              src={user?.profilepicture}
+              alt='profile'
+            />
+            <div className='userNameDiv'>
+              {user?.name ? user?.name : 'User'}
+            </div>
             <div className='detailsDiv'>
               <div className='titles'>
                 <ul>UserName</ul>
@@ -32,14 +37,14 @@ const UserProfile = () => {
                 <ul>:</ul>
               </div>
               <div className='values'>
-                <ul>{user?.username}</ul>
-                <ul>{user?.email}</ul>
-                <ul>{user?.phone}</ul>
-                <ul>{user?.website}</ul>
+                <ul>{user?.username ? user?.username : 'Unavailable'}</ul>
+                <ul>{user?.email ? user?.email : 'Unavailable'}</ul>
+                <ul>{user?.phone ? user?.phone : 'Unavailable'}</ul>
+                <ul>{user?.website ? user?.website : 'Unavailable'}</ul>
               </div>
             </div>
           </section>
-          <section className='grid-col-span-2 addressDiv  d-flex justify-content-start'>
+          <section className='grid-col-span-2 addressDiv  '>
             <div className='userAddressDiv'>Address:</div>
             <div className='detailsDiv'>
               <div className='titles'>
@@ -55,15 +60,35 @@ const UserProfile = () => {
                 <ul>:</ul>
               </div>
               <div className='values'>
-                <ul>{user?.address?.street}</ul>
-                <ul>{user?.address?.suite}</ul>
-                <ul>{user?.address?.city}</ul>
-                <ul>{user?.address?.zipcode}</ul>
+                <ul>
+                  {user?.address?.street
+                    ? user?.address?.street
+                    : 'Unavailable'}
+                </ul>
+                <ul>
+                  {user?.address?.suite ? user?.address?.suite : 'Unavailable'}
+                </ul>
+                <ul>
+                  {user?.address?.city ? user?.address?.city : 'Unavailable'}
+                </ul>
+                <ul>
+                  {user?.address?.zipcode
+                    ? user?.address?.zipcode
+                    : 'Unavailable'}
+                </ul>
               </div>
-              <GoogleMap
-                lat={user?.address?.geo?.lat}
-                lng={user?.address?.geo?.lng}
-              />
+            </div>
+            <GoogleMap
+              lat={user?.address?.geo?.lat}
+              lng={user?.address?.geo?.lng}
+            />
+            <div className='long-latDetailsDiv d-flex justify-content-end'>
+              <span className='me-3'>
+                Lat: <span className='values'>{user?.address?.geo?.lat} </span>
+              </span>
+              <span>
+                Long: <span className='values'>{user?.address?.geo?.lng}</span>
+              </span>
             </div>
           </section>
           <section className='comapntDetailsDiv'>
@@ -80,9 +105,15 @@ const UserProfile = () => {
                 <ul>:</ul>
               </div>
               <div className='values'>
-                <ul>{user?.company?.name}</ul>
-                <ul>{user?.company?.catchPhrase}</ul>
-                <ul>{user?.company?.bs}</ul>
+                <ul>
+                  {user?.company?.name ? user?.company?.name : 'Unavailable'}
+                </ul>
+                <ul>
+                  {user?.company?.catchPhrase
+                    ? user?.company?.catchPhrase
+                    : 'Unavailable'}
+                </ul>
+                <ul>{user?.company?.bs ? user?.company?.bs : 'Unavailable'}</ul>
               </div>
             </div>
           </section>

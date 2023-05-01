@@ -30,10 +30,14 @@ export const UserProfileStyles = styled.div`
     border-left: 1px solid #b7b7b7;
     padding: 20px;
   }
+  .userDetailsDiv {
+    padding: 0 80px;
+  }
   .comapntDetailsDiv {
     padding: 0 40px;
   }
   .userAddressDiv {
+    text-align: start;
     font-size: 24px;
     color: #b7b7b7;
   }
@@ -59,6 +63,15 @@ export const UserProfileStyles = styled.div`
       font-weight: 600;
       color: #444343;
       text-align: start;
+    }
+  }
+  .long-latDetailsDiv {
+    span {
+      color: #746e6ed9;
+      .values {
+        font-weight: 600;
+        color: #444343;
+      }
     }
   }
 `;

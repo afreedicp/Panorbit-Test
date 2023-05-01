@@ -15,7 +15,9 @@ export const TopBarStyles = styled.div`
     letter-spacing: 2px;
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
     font-weight: 600;
-
     font-size: 24px;
+  }
+  .profileContainer {
+    position: relative;
   }
 `;

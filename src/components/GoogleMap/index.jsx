@@ -1,18 +1,14 @@
-import React from 'react';
-import GoogleMapReact from 'google-map-react';
 const GoogleMap = ({ lat, lng }) => {
-  const center = {
-    lat: lat,
-    lng: lng,
-  };
-  const zoom = 11;
   return (
-    <div style={{ height: '200px', width: '200px' }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: '' }}
-        defaultCenter={center}
-        defaultZoom={zoom}
-      ></GoogleMapReact>
+    <div>
+      <iframe
+        src={`https://maps.google.com/maps?q=${lat},${lng}&hl=es;&output=embed&amp;disableDefaultUI=true`}
+        width='500'
+        height='400'
+        allowfullscreen='false'
+        loading='lazy'
+        referrerpolicy='no-referrer-when-downgrade'
+      ></iframe>
     </div>
   );
 };

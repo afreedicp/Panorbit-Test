@@ -2,7 +2,7 @@ import { UserListStyles } from './styles';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getCurrentUser } from '../../Store/userSlice';
-const UserList = ({ data }) => {
+const UserList = ({ data, from }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const setUser = (element) => {
@@ -12,7 +12,9 @@ const UserList = ({ data }) => {
   return (
     <UserListStyles>
       <div
-        className='userContainer'
+        className={`userContainer  ${
+          from === 'profile' && 'reducedUserContainer'
+        }`}
         onClick={() => {
           setUser(data);
         }}
