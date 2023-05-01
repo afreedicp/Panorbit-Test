@@ -2,6 +2,7 @@ const GoogleMap = ({ lat, lng }) => {
   return (
     <div>
       <iframe
+        title='map'
         src={`https://maps.google.com/maps?q=${lat},${lng}&hl=es;&output=embed&amp;disableDefaultUI=true`}
         width='500'
         height='400'

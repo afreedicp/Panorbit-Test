@@ -9,12 +9,10 @@ const ToDo = () => {
   const user = useSelector(selectAUser);
   return (
     <ToDoStyles>
-      <div className='toDoContainer'>
-        <SideBar />
-        <TopBar data={user} />
-        <div className='conatntDiv'>
-          <span className='warningText'>Coming Soon</span>
-        </div>
+      <TopBar data={user} />
+      <SideBar />
+      <div className='conatntDiv'>
+        <span className='warningText'>Coming Soon</span>
         <ChatBox />
       </div>
     </ToDoStyles>

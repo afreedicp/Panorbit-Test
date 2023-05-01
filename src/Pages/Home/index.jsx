@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import wave from '../../Assets/wave.svg';
-import UserList from '../../components/UserList';
-import { LandingPageStyles } from './styles';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import UserList from '../../components/UserList';
 import { getUsersList, selectUsers } from '../../Store/userSlice';
+import { LandingPageStyles } from './styles';
 
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUsersList());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const users = useSelector(selectUsers);
   return (

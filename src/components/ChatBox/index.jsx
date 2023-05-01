@@ -35,7 +35,10 @@ const ChatBox = () => {
           Chats
         </div>
         <div className='arrowIconDiv'>
-          <i className='fa-solid fa-angle-up' style={{ color: '#ffffff' }}></i>
+          <i
+            className={`fa-solid fa-angle-up ${seeChat && 'chatArrowActive'}`}
+            style={{ color: '#ffffff' }}
+          ></i>
         </div>
       </div>
       {seeChat && (

@@ -54,6 +54,10 @@ export const UserProfileStyles = styled.div`
     font-size: 22px;
     ul {
       padding: 0 5px;
+      max-width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .titles {
       color: #746e6ed9;

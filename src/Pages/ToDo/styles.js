@@ -1,15 +1,12 @@
 import styled from '@emotion/styled';
 export const ToDoStyles = styled.div`
-  .toDoContainer {
-    padding: 50px 40px;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-  }
+  padding: 50px 40px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
   .conatntDiv {
     width: 100%;
     margin-left: 19%;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;

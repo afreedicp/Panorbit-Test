@@ -19,6 +19,9 @@ export const ChatBoxStyles = styled.div`
   .chatHeadDiv {
     color: #fff;
   }
+  .chatArrowActive {
+    transform: rotate(180deg);
+  }
   .usersList {
     background: #fff;
     max-height: 300px;

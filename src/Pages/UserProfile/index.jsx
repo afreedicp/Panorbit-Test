@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
-
-import SideBar from '../../components/SideBar';
-import { UserProfileStyles } from './styles';
+import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectAUser } from '../../Store/userSlice';
-import TopBar from '../../components/TopBar';
-import GoogleMap from '../../components/GoogleMap';
 import ChatBox from '../../components/ChatBox';
+import GoogleMap from '../../components/GoogleMap';
+import SideBar from '../../components/SideBar';
+import TopBar from '../../components/TopBar';
+import { selectAUser } from '../../Store/userSlice';
+import { UserProfileStyles } from './styles';
 
 const UserProfile = () => {
   const user = useSelector(selectAUser);

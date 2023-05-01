@@ -30,7 +30,7 @@ const TopBar = ({ data }) => {
             alt='profile'
             onClick={() => setShowUser(!showUser)}
           />
-          {showUser && <ProfileDropDown setShowUser={setShowUser} />}
+          {showUser && <ProfileDropDown />}
           <span>{data?.name}</span>
         </div>
       </div>
