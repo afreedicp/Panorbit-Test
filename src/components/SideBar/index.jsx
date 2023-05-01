@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { SideBarStyles } from './style';
-
+import arrow from '../../Assets/arrow.svg';
 const SideBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,7 +19,11 @@ const SideBar = () => {
             }
           }}
         >
-          {activeNav === 'profile' && <div className='activeNagigation'></div>}
+          {activeNav === 'profile' && (
+            <div className='activeNagigation d-flex align-items-center justify-content-end'>
+              <img className='arrowHead' src={arrow} alt='arrow ' />
+            </div>
+          )}
           Profile
         </nav>
         <nav
@@ -33,7 +37,11 @@ const SideBar = () => {
             }
           }}
         >
-          {activeNav === 'posts' && <div className='activeNagigation'></div>}
+          {activeNav === 'posts' && (
+            <div className='activeNagigation d-flex align-items-center justify-content-end'>
+              <img className='arrowHead' src={arrow} alt='arrow ' />
+            </div>
+          )}
           Posts
         </nav>
         <nav
@@ -45,7 +53,11 @@ const SideBar = () => {
             }
           }}
         >
-          {activeNav === 'gallery' && <div className='activeNagigation'></div>}
+          {activeNav === 'gallery' && (
+            <div className='activeNagigation d-flex align-items-center justify-content-end'>
+              <img className='arrowHead' src={arrow} alt='arrow ' />
+            </div>
+          )}
           Gallery
         </nav>
         <nav
@@ -57,7 +69,11 @@ const SideBar = () => {
             }
           }}
         >
-          {activeNav === 'todo' && <div className='activeNagigation'></div>}
+          {activeNav === 'todo' && (
+            <div className='activeNagigation d-flex align-items-center justify-content-end'>
+              <img className='arrowHead' src={arrow} alt='arrow ' />
+            </div>
+          )}
           ToDo
         </nav>
       </div>

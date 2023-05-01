@@ -3,9 +3,10 @@ import { ProfileDropDownStyles } from './styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAUser, selectUsers } from '../../Store/userSlice';
 import UserList from '../UserList';
+import { useNavigate } from 'react-router-dom';
 const ProfileDropDown = ({ setShowUser }) => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const users = useSelector(selectUsers);
   const user = useSelector(selectAUser);
   //   dispatch(getCurrentUser({ data: element }));
@@ -23,6 +24,13 @@ const ProfileDropDown = ({ setShowUser }) => {
             <UserList data={item} from={'profile'} />
           ))}
         </div>
+        <button
+          type='buttin'
+          onClick={() => navigate('/')}
+          className='signoutButton'
+        >
+          Sign out
+        </button>
       </div>
     </ProfileDropDownStyles>
   );

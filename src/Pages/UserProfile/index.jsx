@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { selectAUser } from '../../Store/userSlice';
 import TopBar from '../../components/TopBar';
 import GoogleMap from '../../components/GoogleMap';
+import ChatBox from '../../components/ChatBox';
 
 const UserProfile = () => {
   const user = useSelector(selectAUser);
@@ -118,6 +119,7 @@ const UserProfile = () => {
             </div>
           </section>
         </div>
+        <ChatBox />
       </div>
     </UserProfileStyles>
   );

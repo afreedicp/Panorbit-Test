@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import ChatBox from '../../components/ChatBox';
 import SideBar from '../../components/SideBar';
 import TopBar from '../../components/TopBar';
 import { selectAUser } from '../../Store/userSlice';
@@ -13,6 +14,7 @@ const Posts = () => {
       <TopBar data={user} />
       <div className='conatntDiv'>
         <span className='warningText'>Coming Soon</span>
+        <ChatBox />
       </div>
     </PostsStyles>
   );

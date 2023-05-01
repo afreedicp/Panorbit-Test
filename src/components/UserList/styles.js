@@ -5,6 +5,7 @@ export const UserListStyles = styled.div`
     padding: 15px;
     border-bottom: 1px solid #746e6ed9;
     display: flex;
+    overflow-x: hidden;
     align-items: center;
   }
   .reducedUserContainer {
@@ -15,7 +16,7 @@ export const UserListStyles = styled.div`
     }
     .userName {
       margin-left: 12px;
-      max-width: 100%;
+      max-width: 93%;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -25,5 +26,11 @@ export const UserListStyles = styled.div`
     margin-left: 20px;
     color: #565555fa;
     font-size: 18px;
+  }
+  .onlineIndicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: green;
   }
 `;

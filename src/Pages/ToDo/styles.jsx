@@ -9,6 +9,7 @@ export const ToDoStyles = styled.div`
   .conatntDiv {
     width: 100%;
     margin-left: 19%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;

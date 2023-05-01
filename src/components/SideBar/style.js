@@ -67,4 +67,10 @@ export const SideBarStyles = styled.div`
       box-shadow: 5px 5px 0 0 #fff;
     }
   }
+  .arrowHead {
+    width: 14px;
+    transform: rotate(270deg);
+    filter: invert(91%) sepia(0%) saturate(0%) hue-rotate(165deg)
+      brightness(83%) contrast(85%);
+  }
 `;

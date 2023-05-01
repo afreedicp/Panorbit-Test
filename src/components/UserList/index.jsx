@@ -13,10 +13,10 @@ const UserList = ({ data, from }) => {
     <UserListStyles>
       <div
         className={`userContainer  ${
-          from === 'profile' && 'reducedUserContainer'
+          (from === 'profile' || from === 'chatbox') && 'reducedUserContainer'
         }`}
         onClick={() => {
-          setUser(data);
+          from !== 'chatbox' && setUser(data);
         }}
       >
         <img
@@ -24,7 +24,10 @@ const UserList = ({ data, from }) => {
           src={data.profilepicture}
           alt='profile-pic'
         />
-        <span className='userName'>{data.name}</span>
+        <div className='d-flex justify-content-between w-100 align-items-center pe-3'>
+          <span className='userName'>{data.name}</span>
+          {from === 'chatbox' && <span className='onlineIndicator'></span>}
+        </div>
       </div>
     </UserListStyles>
   );
